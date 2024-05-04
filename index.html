@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showel-UP</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            background: #ffffff center no-repeat fixed;
+            background-size: auto 65%;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .user {
+
+        }
+        .btn-group-up {
+            padding: 10%;
+            position: fixed;
+            height: 100px;
+            width: 100%;
+            background-color: yellow;
+            top: 0%;
+            padding: 0;
+            border: 0;
+        }
+        .button-left-up {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            height:50px;
+            width: 100px;
+            background-color: red;
+        }
+
+        .button-right-up {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            height:50px;
+            width: 100px;
+            background-color: red;
+        }
+
+        .img_man {
+            border: none;
+            background-color: rgba(27,27,27,0);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .man {
+            height: 300px;
+        }
+
+        .btn-group-down {
+            padding-top: 10%;
+            position: fixed;
+            height: 100px;
+            width: 100%;
+            background-color: yellow;
+            bottom: 0%;
+            border: 0;
+        }
+        .button-side-down {
+            float: left;
+            background-color: green;
+            height:50px;
+            width: 15%;
+
+        }
+        .button-center-down {
+            float: left;
+            background-color: green;
+            height:75px;
+            width:40%;
+
+        }
+        .showel {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100%;
+            user-select: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="btn-group-up">
+        <button class="button-left-up">
+            Пополнить
+        </button>
+        <button class="button-right-up">
+            {{ coins }}
+        </button>
+    </div>
+    <div class="img_man">
+        {% if showel_on %}
+            <img src="{{ url_for('static', filename='man_with.png') }}" class="man">
+        {% else %}
+            <img src="{{ url_for('static', filename='man_without.png') }}" class="man">
+        {% endif %}
+    </div>
+    <div class="btn-group-down">
+        <button class="button-side-down">
+            Наш канал
+        </button>
+        <button class="button-side-down">
+            Инфо
+        </button>
+        <button class="button-center-down">
+            <img src="{{ url_for('static', filename='showel.png') }}" class="showel">
+        </button>
+        <button class="button-side-down">
+            Прокачка
+        </button>
+        <button class="button-side-down">
+            Друзья
+        </button>
+    </div>
+</body>
+</html>
