@@ -103,15 +103,15 @@
             Пополнить
         </button>
         <button class="button-right-up">
-            {{ coins }}
+<!--             {{ coins }} -->100
         </button>
     </div>
     <div class="img_man">
-        {% if showel_on %}
+<!--         {% if showel_on %}
             <img src="{{ url_for('static', filename='man_with.png') }}" class="man">
-        {% else %}
-            <img src="{{ url_for('static', filename='man_without.png') }}" class="man">
-        {% endif %}
+        {% else %} -->
+        <img src="{{ url_for('static', filename='man_without.png') }}" class="man">
+<!--         {% endif %} -->
     </div>
     <div class="btn-group-down">
         <button class="button-side-down">
